@@ -39,7 +39,7 @@ export default function Project({
                 title="View Code"
               >
                 <Github 
-                  size={24} 
+                  size={16} 
                   className="text-gray-600 group-hover:text-gray-900 group-hover:scale-110 transition-all duration-300" 
                 />
               </a>
