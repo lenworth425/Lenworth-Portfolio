@@ -1,0 +1,18 @@
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    padding: 0%;
+}
+.custom-spacing {
+    
+    margin-right: 2rem;  
+    font-family: 'Fantasy'; 
+    font-weight: 500; 
+    font-size: 1.5rem;
+    justify-content: end;
+  }
+  
+  .custom-spacing:last-child {
+    margin-right: 3rem;
+  }

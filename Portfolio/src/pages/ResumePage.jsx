@@ -1,8 +1,7 @@
 import { Download, BookOpen, Code, Briefcase, GraduationCap } from 'lucide-react';
 
 export default function ResumePage() {
-  // You can replace this with your actual resume URL
-  const resumeUrl = "/path-to-your-resume.pdf";
+  const resumeUrl = "/resume/resume.pdf";
 
   const skills = {
     technical: ["JavaScript", "React", "Node.js", "HTML/CSS", "Git"],
@@ -11,17 +10,29 @@ export default function ResumePage() {
   };
 
   return (
-    <div className="container mx-auto max-w-4xl px-4 py-8">
-      {/* Header with Download Button */}
-      <div className="flex flex-col md:flex-row justify-between items-center mb-12">
+    <div style={{ margin: '1rem', justifyContent: 'center', textAlign: 'start', marginRight: '1rem', maxWidth: '800px', padding: '2rem' }}>
+
+      <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '3rem' }}>
         <div>
-          <h1 className="text-3xl font-bold mb-2">Resume</h1>
-          <p className="text-gray-600">My skills and qualifications</p>
+          <h1 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Resume</h1>
+          <p style={{ color: '#4A5568' }}>My skills and qualifications</p>
         </div>
         <a
           href={resumeUrl}
           download
-          className="mt-4 md:mt-0 inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          style={{
+            marginTop: '1rem',
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '0.5rem',
+            padding: '0.75rem 1.5rem',
+            backgroundColor: '#3182CE',
+            color: 'white',
+            borderRadius: '0.5rem',
+            textDecoration: 'none'
+          }}
+          onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#2B6CB0'}
+          onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#3182CE'}
         >
           <Download size={20} />
           Download Resume
@@ -29,18 +40,24 @@ export default function ResumePage() {
       </div>
 
       {/* Skills Sections */}
-      <div className="grid md:grid-cols-2 gap-8">
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem' }}>
         {/* Technical Skills */}
-        <section className="bg-white p-6 rounded-lg shadow-md">
-          <div className="flex items-center gap-2 mb-4">
-            <Code className="text-blue-600" size={24} />
-            <h2 className="text-xl font-semibold">Technical Skills</h2>
+        <section style={{ backgroundColor: 'white', padding: '1.5rem', borderRadius: '0.5rem', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
+            <Code style={{ color: '#2B6CB0' }} size={24} />
+            <h2 style={{ fontSize: '1.5rem', fontWeight: '600' }}>Technical Skills</h2>
           </div>
-          <div className="flex flex-wrap gap-2">
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
             {skills.technical.map((skill, index) => (
               <span
                 key={index}
-                className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm"
+                style={{
+                  padding: '0.5rem 1rem',
+                  backgroundColor: '#EBF8FF',
+                  color: '#2B6CB0',
+                  borderRadius: '1rem',
+                  fontSize: '0.875rem'
+                }}
               >
                 {skill}
               </span>
@@ -49,66 +66,52 @@ export default function ResumePage() {
         </section>
 
         {/* Tools & Technologies */}
-        <section className="bg-white p-6 rounded-lg shadow-md">
-          <div className="flex items-center gap-2 mb-4">
-            <BookOpen className="text-green-600" size={24} />
-            <h2 className="text-xl font-semibold">Tools & Technologies</h2>
+        <section style={{ backgroundColor: 'white', padding: '1.5rem', borderRadius: '0.5rem', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
+            <BookOpen style={{ color: '#48BB78' }} size={24} />
+            <h2 style={{ fontSize: '1.5rem', fontWeight: '600' }}>Tools & Technologies</h2>
           </div>
-          <div className="flex flex-wrap gap-2">
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
             {skills.tools.map((tool, index) => (
               <span
                 key={index}
-                className="px-3 py-1 bg-green-50 text-green-700 rounded-full text-sm"
+                style={{
+                  padding: '0.5rem 1rem',
+                  backgroundColor: '#F0FFF4',
+                  color: '#38A169',
+                  borderRadius: '1rem',
+                  fontSize: '0.875rem'
+                }}
               >
                 {tool}
               </span>
             ))}
           </div>
         </section>
-
-        {/* Soft Skills */}
-        <section className="bg-white p-6 rounded-lg shadow-md">
-          <div className="flex items-center gap-2 mb-4">
-            <Briefcase className="text-purple-600" size={24} />
-            <h2 className="text-xl font-semibold">Soft Skills</h2>
+          
+          {/* Soft Skills */}
+        <section style={{ backgroundColor: 'white', padding: '1.5rem', borderRadius: '0.5rem', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
+            <GraduationCap style={{ color: '#805AD5' }} size={24} />
+            <h2 style={{ fontSize: '1.5rem', fontWeight: '600' }}>Soft Skills</h2>
           </div>
-          <div className="flex flex-wrap gap-2">
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
             {skills.softSkills.map((skill, index) => (
               <span
                 key={index}
-                className="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm"
+                style={{
+                  padding: '0.5rem 1rem',
+                  backgroundColor: '#F5F3FF',
+                  color: '#9F7AEA',
+                  borderRadius: '1rem',
+                  fontSize: '0.875rem'
+                }}
               >
                 {skill}
               </span>
             ))}
           </div>
         </section>
-
-        {/* Education Section */}
-        <section className="bg-white p-6 rounded-lg shadow-md">
-          <div className="flex items-center gap-2 mb-4">
-            <GraduationCap className="text-orange-600" size={24} />
-            <h2 className="text-xl font-semibold">Education</h2>
-          </div>
-          <div className="space-y-4">
-            <div>
-              <h3 className="font-medium">University of the West Indies</h3>
-              <p className="text-gray-600">Bachelor's in Food Chemistry</p>
-              <p className="text-sm text-gray-500">2010 - 2016</p>
-            </div>
-            {/* Add more education items as needed */}
-          </div>
-        </section>
-      </div>
-
-      {/* Optional: Additional Information */}
-      <div className="mt-8 bg-gray-50 p-6 rounded-lg">
-        <h2 className="text-xl font-semibold mb-4">Additional Information</h2>
-        <p className="text-gray-600">
-          Feel free to download my complete resume for more detailed information
-          about my work experience, projects, and achievements. If you have any
-          questions, don't hesitate to reach out through the contact form.
-        </p>
       </div>
     </div>
   );

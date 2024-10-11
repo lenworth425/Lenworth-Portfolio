@@ -1,0 +1,95 @@
+.project-card {
+  position: relative;
+  height: 20rem; /* Adjust height as needed */
+  width: 20rem; /* Adjust width as needed */
+  display: flex;
+  border-radius: 0.5rem; /* Rounded corners */
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+
+.project-card:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.349);
+  transition: background 0.3s;
+}
+
+.project-card:hover .project-overlay {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.project-content {
+  position: absolute;
+  inset: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transform: translateY(2rem);
+  transition: transform 0.3s;
+}
+
+.project-card:hover .project-content {
+  transform: translateY(0);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+}
+
+.github-link {
+  padding: 0.25rem;
+  border-radius: 9999px; /* Fully rounded */
+  background: rgba(255, 255, 255, 0.1);
+  transition: background 0.3s;
+}
+
+.github-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.project-description {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.75rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.project-card:hover .project-description {
+  opacity: 1;
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.technology-badge {
+  padding: 0.5rem 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px; 
+  
+}

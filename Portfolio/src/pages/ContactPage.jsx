@@ -37,18 +37,16 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="container mx-auto max-w-2xl px-4 py-8">
+    <div style={{ margin: '2rem', textAlign: 'start', alignContent: 'space-between' }} className="container mx-auto max-w-2xl px-4 py-8">
       <div className="mb-8 text-center">
-        <h1 className="text-3xl font-bold mb-2">Get in Touch</h1>
+        <h1 className="text-3xl font-bold mb-2">Contact</h1>
         <p className="text-gray-600">I'd love to hear from you. Send me a message!</p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-6">
-        {/* Name Field */}
-        <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-            Name
-          </label>
+      <form onSubmit={handleSubmit} className="form">
+        {/* Name */}
+        <div className="form-group">
+          <label htmlFor="name" className="form-label">Name:</label>
           <input
             type="text"
             id="name"
@@ -56,16 +54,14 @@ export default function ContactPage() {
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+            className="form-input"
             placeholder="Your name"
           />
         </div>
 
-        {/* Email Field */}
-        <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-            Email
-          </label>
+        {/* Email */}
+        <div className="form-group">
+          <label htmlFor="email" className="form-label">Email:</label>
           <input
             type="email"
             id="email"
@@ -73,15 +69,14 @@ export default function ContactPage() {
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+            className="form-input"
             placeholder="your.email@example.com"
           />
         </div>
 
-        <div>
-          <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-            Message
-          </label>
+        {/* Message */}
+        <div className="form-group">
+          <label htmlFor="message" className="form-label">Message:</label>
           <textarea
             id="message"
             name="message"
@@ -89,22 +84,20 @@ export default function ContactPage() {
             onChange={handleChange}
             required
             rows={5}
-            className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+            className="form-input"
             placeholder="Your message here..."
           />
         </div>
 
+        {/* Submit Button */}
         <button
           type="submit"
           disabled={isSubmitting}
-          className={`w-full flex items-center justify-center gap-2 px-6 py-3 text-white rounded-lg transition-all
-            ${isSubmitting 
-              ? 'bg-blue-400 cursor-not-allowed' 
-              : 'bg-blue-600 hover:bg-blue-700'}`}
+          className="submit-button"
         >
           {isSubmitting ? (
             <>
-              <span className="w-5 h-5 border-t-2 border-white rounded-full animate-spin" />
+              <span className="loading-spinner" />
               Sending...
             </>
           ) : (
@@ -115,14 +108,15 @@ export default function ContactPage() {
           )}
         </button>
 
+        {/* Success/Error Messages */}
         {submitStatus === 'success' && (
-          <div className="p-4 bg-green-50 text-green-700 rounded-lg">
+          <div className="success-message">
             Message sent successfully! Thank you for reaching out.
           </div>
         )}
         
         {submitStatus === 'error' && (
-          <div className="p-4 bg-red-50 text-red-700 rounded-lg">
+          <div className="error-message">
             Failed to send message. Please try again later.
           </div>
         )}

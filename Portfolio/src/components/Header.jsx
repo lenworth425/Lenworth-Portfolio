@@ -3,12 +3,19 @@ import Navbar from './Nav';
 
 const styles = {
     headerstyle: {
-        backgroundImg: 'url(../../public/images/background1.jpg)',
+        backgroundImage: 'url("/Images/background1.jpg")',
+        backgroundSize: 'cover',
+        backgroundrepeat: 'no-repeat',
+        padding: '0.5rem 0',
+        display: 'flex',
+        justifyContent: 'space-between',
+        minHeight: '200px',
     },
     headingStyle: {
-        color: 'black',
-        fontSize: '75px',
-        textAlign: 'start',
+        margin: '2rem',
+        color: 'gold',
+        fontSize: '60px',
+        textAlign: 'center',
     },
 };
 

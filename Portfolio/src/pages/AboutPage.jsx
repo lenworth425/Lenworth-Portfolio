@@ -1,14 +1,15 @@
+
 export default function About() {
     return (
-      <div>
-        <h1>About Page</h1>
-        <p>
-          Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
-          Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
-          mollis diam. Nunc aliquet risus ac finibus porta. Nam quis arcu non
-          lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-          imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus
-          in. Sed rhoncus mollis diam, sit amet facilisis lectus blandit at.
+      <div style={{ margin: '20px' }}>
+        <h1>About Me</h1>
+        <img src="/Images/Me.jpg" alt="Your Name" style={{ width: '150px', borderRadius: '50%' }} />
+        <p style={{ margin: '20px', textAlign: 'center' }}>
+          I am a web developer with a passion for creating beautiful and functional websites. 
+          I have experience with HTML, CSS, JavaScript, React, and Bootstrap CSS.   I am always eager 
+          to learn new technologies and improve my skills. I am currently looking for new opportunities 
+          to work on exciting projects and collaborate with other developers. Feel free 
+          to contact me if you would like to work together.
         </p>
       </div>
     );
