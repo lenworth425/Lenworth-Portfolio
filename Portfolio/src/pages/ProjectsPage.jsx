@@ -5,7 +5,7 @@ import projects from '../components/UI/projects/ProjectsCard';
 const ProjectGallery = () => {
     return (
         <div >
-            <div style={{display:'flex', flexWrap:'wrap', justifyContent: 'space-between', gap: '40px'}} >
+            <div style={{margin: '4rem', display:'flex', flexWrap:'wrap', justifyContent: 'space-between', gap: '40px'}} >
                 {projects.map((project) => (
                     <Project 
                         key={project.id} 

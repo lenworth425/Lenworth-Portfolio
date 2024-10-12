@@ -32,7 +32,7 @@ export default function Project({
                 className="github-link"
                 title="View Code"
               >
-                <Github size={18} className="github-icon" />
+                <Github size={24} className="github-icon" />
               </a>
             )}
           </div>

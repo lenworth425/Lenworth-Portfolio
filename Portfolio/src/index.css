@@ -25,13 +25,14 @@ a:hover {
 
 main {
   flex: 1;
+
 }
 
 body {
   margin: 0em;
   min-width: 320px;
   min-height: 100vh;
-  background-color: rgba(20, 99, 99, 0.37);
+  
   
 }
 

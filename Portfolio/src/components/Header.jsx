@@ -2,12 +2,13 @@ import React from 'react';
 import Navbar from './Nav';
 
 const styles = {
-    headerstyle: {
-        backgroundImage: 'url("/Images/background1.jpg")',
+    headerStyle: {
+        backgroundImage: 'url("/Images/background4.jpg")',
         backgroundSize: 'cover',
-        backgroundrepeat: 'no-repeat',
+        backgroundRepeat: 'no-repeat',
         padding: '0.5rem 0',
         display: 'flex',
+        flexDirection: 'column',
         justifyContent: 'space-between',
         minHeight: '200px',
     },
@@ -15,15 +16,22 @@ const styles = {
         margin: '2rem',
         color: 'gold',
         fontSize: '60px',
-        textAlign: 'center',
+        fontFamily: 'cursive',
+        textAlign: 'start',
+    },
+    navWrapperStyle: {
+        alignSelf: 'flex-end',
+        width: '100%',
     },
 };
 
 function Header() {
     return (
-        <header style={styles.headerstyle}>
+        <header style={styles.headerStyle}>
             <h1 style={styles.headingStyle}>Lenworth Miller</h1>
-            <Navbar />
+            <div style={styles.navWrapperStyle}>
+                <Navbar />
+            </div>
         </header>
     );
 }
