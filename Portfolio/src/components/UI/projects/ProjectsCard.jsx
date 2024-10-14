@@ -38,8 +38,16 @@ const projects = [
     title: 'MadLibs Mashup',
     description: 'Mad Libs Mashup is a web-based game that transforms ordinary words into extraordinary stories.',
     technologies: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
-    imageUrl: '/Images/BudgetTracker.png',
+    imageUrl: '/Images/MadLibs.png',
     githubLink: 'https://github.com/Dom-Darling/Aus05_mad_lib.git',
+  },
+  {
+    id:'6',
+    title: 'Portfolio',
+    description: 'This website servers as a creation of a portfolio using my new React skills. ',
+    technologies: ['HTML', 'CSS', 'React','JavaScript'],
+    imageUrl: '/Images/Portfolio.png',
+    githubLink: 'https://github.com/lenworth425/Lenworth-Portfolio.git',
   },
 ];
 export default projects;
