@@ -27,7 +27,7 @@ const projects = [
   },
   {
     id:'4',
-    title: 'My-Personal-Weather',
+    title: 'Weather Dashboard',
     description: 'This is a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.',
     technologies: ['HTML', 'CSS', 'JavaScript', 'OpenWeather API'],
     imageUrl: '/Images/WeatherDashboard.png',
