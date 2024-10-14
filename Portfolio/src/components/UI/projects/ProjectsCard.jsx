@@ -27,11 +27,19 @@ const projects = [
   },
   {
     id:'4',
-    title: 'Weather Dashboard',
+    title: 'My-Personal-Weather',
     description: 'This is a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.',
     technologies: ['HTML', 'CSS', 'JavaScript', 'OpenWeather API'],
     imageUrl: '/Images/WeatherDashboard.png',
     githubLink: 'https://github.com/lenworth425/My-Personal-Weather.git',
+  },
+  {
+    id:'5',
+    title: 'MadLibs Mashup',
+    description: 'Mad Libs Mashup is a web-based game that transforms ordinary words into extraordinary stories.',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+    imageUrl: '/Images/BudgetTracker.png',
+    githubLink: 'https://github.com/Dom-Darling/Aus05_mad_lib.git',
   },
 ];
 export default projects;
