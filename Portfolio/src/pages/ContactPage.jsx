@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Send } from 'lucide-react';
+import { IoIosSend } from "react-icons/io";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -37,90 +37,92 @@ export default function ContactPage() {
   };
 
   return (
-    <div style={{ margin: '2rem', textAlign: 'start', alignContent: 'space-between' }} className="container mx-auto max-w-2xl px-4 py-8">
-      <div className="mb-8 text-center">
-        <h1 className="text-3xl font-bold mb-2">Contact</h1>
-        <p className="text-gray-600">I'd love to hear from you. Send me a message!</p>
-      </div>
-
-      <form onSubmit={handleSubmit} className="form">
-        {/* Name */}
-        <div className="form-group">
-          <label htmlFor="name" className="form-label">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-            className="form-input"
-            placeholder="Your name"
-          />
+    <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+      <div style={{ textAlign: 'start', alignContent: 'space-between', width: '40%' }} className="px-4 py-8">
+        <div className="mb-8 text-center">
+          <h1 className="text-3xl font-bold mb-2">Contact</h1>
+          <p className="text-gray-600">I'd love to hear from you. Send me a message!</p>
         </div>
 
-        {/* Email */}
-        <div className="form-group">
-          <label htmlFor="email" className="form-label">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-            className="form-input"
-            placeholder="your.email@example.com"
-          />
-        </div>
+        <form onSubmit={handleSubmit} className="form">
+          {/* Name */}
+          <div className="form-group">
+            <label htmlFor="name" className="form-label">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              className="form-input"
+              placeholder="Your name"
+            />
+          </div>
 
-        {/* Message */}
-        <div className="form-group">
-          <label htmlFor="message" className="form-label">Message:</label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-            rows={5}
-            className="form-input"
-            placeholder="Your message here..."
-          />
-        </div>
+          {/* Email */}
+          <div className="form-group">
+            <label htmlFor="email" className="form-label">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              className="form-input"
+              placeholder="your.email@example.com"
+            />
+          </div>
 
-        {/* Submit Button */}
-        <button
-          type="submit"
-          disabled={isSubmitting}
-          className="submit-button"
-        >
-          {isSubmitting ? (
-            <>
-              <span className="loading-spinner" />
-              Sending...
-            </>
-          ) : (
-            <>
-              <Send size={20} />
-              Submit
-            </>
+          {/* Message */}
+          <div className="form-group">
+            <label htmlFor="message" className="form-label">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+              rows={5}
+              className="form-input"
+              placeholder="Your message here..."
+            />
+          </div>
+
+          {/* Submit Button */}
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className="submit-button"
+          >
+            {isSubmitting ? (
+              <>
+                <span className="loading-spinner" />
+                Sending...
+              </>
+            ) : (
+              <>
+                <IoIosSend size={20} />
+                Submit
+              </>
+            )}
+          </button>
+
+          {/* Success/Error Messages */}
+          {submitStatus === 'success' && (
+            <div className="success-message">
+              Message sent successfully! Thank you for reaching out.
+            </div>
           )}
-        </button>
-
-        {/* Success/Error Messages */}
-        {submitStatus === 'success' && (
-          <div className="success-message">
-            Message sent successfully! Thank you for reaching out.
-          </div>
-        )}
-        
-        {submitStatus === 'error' && (
-          <div className="error-message">
-            Failed to send message. Please try again later.
-          </div>
-        )}
-      </form>
+          
+          {submitStatus === 'error' && (
+            <div className="error-message">
+              Failed to send message. Please try again later.
+            </div>
+          )}
+        </form>
+      </div>
     </div>
   );
 }

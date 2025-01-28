@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Github } from 'lucide-react';
-import './ProjectTile.css'; // Import your CSS file
+import { FaGithub } from 'react-icons/fa';
+import './ProjectTile.css'; 
 
 export default function Project({ 
   title,
@@ -32,7 +32,7 @@ export default function Project({
                 className="github-link"
                 title="View Code"
               >
-                <Github size={24} className="github-icon" />
+                <FaGithub size={24} className="github-icon" />
               </a>
             )}
           </div>

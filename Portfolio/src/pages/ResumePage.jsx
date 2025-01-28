@@ -1,7 +1,7 @@
-import { Download, BookOpen, Code, Briefcase, GraduationCap } from 'lucide-react';
+import { FaFileDownload, FaBookOpen, FaCode, FaGraduationCap } from 'react-icons/fa';
 
 export default function ResumePage() {
-  const resumeUrl = "/resume/resume.pdf";
+  const resumeUrl = "/resume/Lenworth Miller FSD Resume.pdf";
 
   const skills = {
     technical: ["JavaScript", "React", "Node.js", "HTML/CSS", "Git"],
@@ -10,7 +10,8 @@ export default function ResumePage() {
   };
 
   return (
-    <div style={{ margin: '1rem', justifyContent: 'center', textAlign: 'start', marginRight: '1rem', maxWidth: '800px', padding: '2rem' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', width: '100%'}}>
+    <div style={{ margin: '1rem', alignContent: 'center', justifyContent: 'center', textAlign: 'start', marginRight: '1rem', maxWidth: '800px', padding: '2rem' }}>
 
       <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '3rem' }}>
         <div>
@@ -34,7 +35,7 @@ export default function ResumePage() {
           onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#2B6CB0'}
           onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#3182CE'}
         >
-          <Download size={20} />
+          <FaFileDownload size={20} />
           Download Resume
         </a>
       </div>
@@ -44,7 +45,7 @@ export default function ResumePage() {
         {/* Technical Skills */}
         <section style={{ backgroundColor: 'white', padding: '1.5rem', borderRadius: '0.5rem', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
-            <Code style={{ color: '#2B6CB0' }} size={24} />
+            <FaCode style={{ color: '#2B6CB0' }} size={24} />
             <h2 style={{ fontSize: '1.5rem', fontWeight: '600' }}>Technical Skills</h2>
           </div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
@@ -68,7 +69,7 @@ export default function ResumePage() {
         {/* Tools & Technologies */}
         <section style={{ backgroundColor: 'white', padding: '1.5rem', borderRadius: '0.5rem', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
-            <BookOpen style={{ color: '#48BB78' }} size={24} />
+            <FaBookOpen style={{ color: '#48BB78' }} size={24} />
             <h2 style={{ fontSize: '1.5rem', fontWeight: '600' }}>Tools & Technologies</h2>
           </div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
@@ -92,7 +93,7 @@ export default function ResumePage() {
           {/* Soft Skills */}
         <section style={{ backgroundColor: 'white', padding: '1.5rem', borderRadius: '0.5rem', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
-            <GraduationCap style={{ color: '#805AD5' }} size={24} />
+            <FaGraduationCap style={{ color: '#805AD5' }} size={24} />
             <h2 style={{ fontSize: '1.5rem', fontWeight: '600' }}>Soft Skills</h2>
           </div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
@@ -113,6 +114,7 @@ export default function ResumePage() {
           </div>
         </section>
       </div>
+    </div>
     </div>
   );
 }
